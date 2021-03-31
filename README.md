@@ -34,9 +34,9 @@ check the status of the pod with:
 $kubectl get po -w
 ```
 once its up run the following to open it in your browser:
-
-minikube service promsvr
-
+```
+$minikube service promsvr
+```
 ## Prometheus/Alertmanager Configs and Enhancing the Deployment Yaml
 
 let's deploy our basic Prometheus deployment with their official image:
