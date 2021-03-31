@@ -1,13 +1,32 @@
-# prometheus-slack
-Monitoring app with prometheus and send alert to slack channel with kubernetes cluster
-
+## Prometheus-slack
+Monitoring app with prometheus and send alert to slack channel with kubernetes cluster locally on minikube.
 You can create your own docker image and push to docker hub or you can use my image. 
+
+My tree looks like this.
+├── README.md
+├── app
+│   ├── Dockerfile
+│   ├── deployment.yml
+│   ├── hello.py
+│   └── requirements.txt
+├── configmap.sh
+├── configs
+│   ├── alertmanager.yml
+│   ├── prometheus.yml
+│   └── rules.yml
+├── deployment.yml
+├── permissions
+│   └── permissions.yml
+├── redeploy.sh
+└── start_app.sh
+
+#Start the project
 
 Start the kubernetes cluster or local minikube cluster.
 
 Deploy the falcon app image with:
 
-cd && kubectl create -f deployments.yml or run ./start_app.sh
+./start_app.sh
 
 check the status of the pod with:
 
@@ -29,7 +48,7 @@ In the menu, navigate to Status > Targets to see your Prometheus instance monito
 
 Replace ‘Extern_Service_url’ in prometheus.yml file with the service url.
 
-Create slack channel or your existing channel and add incoming Webhooks to slack. To set this up check out this link(https://api.slack.com/messaging/webhooks) and add Incoming Webhooks to slack. Once you have your webhook url add it to slack_api_url in alertmanager.yml
+Create slack channel or your existing channel and add incoming Webhooks to slack. To set this up check out this <a href="https://api.slack.com/messaging/webhooks" rev="en_rl_none" textcontent="link">link</a> and add Incoming Webhooks to slack. Once you have your webhook url add it to slack_api_url in alertmanager.yml
 
 Create configmaps by running:
 
