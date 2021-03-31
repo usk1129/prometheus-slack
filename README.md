@@ -29,7 +29,7 @@ In the menu, navigate to Status > Targets to see your Prometheus instance monito
 
 Replace ‘Extern_Service_url’ in prometheus.yml file with the service url.
 
-Create slack channel or your existing channel and add incoming Webhooks to slack. To set this up check out this link and add Incoming Webhooks to slack. Once you have your webhook url add it to slack_api_url in alertmanager.yml
+Create slack channel or your existing channel and add incoming Webhooks to slack. To set this up check out this link(https://api.slack.com/messaging/webhooks) and add Incoming Webhooks to slack. Once you have your webhook url add it to slack_api_url in alertmanager.yml
 
 Create configmaps by running:
 
