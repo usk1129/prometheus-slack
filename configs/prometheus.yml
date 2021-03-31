@@ -32,4 +32,4 @@ scrape_configs:
   - job_name: 'Hello-app'
 
     static_configs:
-    - targets: ['192.168.64.5:30832']
+    - targets: ['Extern_Service_url:30832']
