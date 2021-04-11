@@ -37,6 +37,12 @@ once its up run the following to open it in your browser:
 ```
 $minikube service promsvr
 ```
+
+Create the permissions from the yaml file that includes clusterRole, clusterRoleBinding, serviceAccount by running the command:
+```
+$cd permissions
+$kubectl create -f permissions.yml
+```
 ## Prometheus/Alertmanager Configs and Enhancing the Deployment Yaml
 
 let's deploy our basic Prometheus deployment with their official image:
@@ -49,7 +55,12 @@ $minikube service prometheus
 ```
 In the menu, navigate to Status > Targets to see your Prometheus instance monitoring itself.
 
-Replace ‘Extern_Service_url’ in prometheus.yml file with the service url.
+Replace ‘Extern_Service_url’ in the prometheus.yml file with the service url.
+You can get it in the minikube cluster by running the command and include the output without HTTP://:
+
+```
+minikube service promsvr  --url
+```
 
 Create slack channel or your existing channel and add incoming Webhooks to slack. To set this up check out this <a href="https://api.slack.com/messaging/webhooks" rev="en_rl_none" textcontent="link">link</a> and add Incoming Webhooks to slack. Once you have your webhook url add it to slack_api_url in alertmanager.yml
 
