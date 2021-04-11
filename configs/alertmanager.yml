@@ -10,5 +10,5 @@ route:
 receivers:
 - name: 'slack-notifications'
   slack_configs:
-  - channel: '#alerts'
+  - channel: '#alert'
     send_resolved: true
