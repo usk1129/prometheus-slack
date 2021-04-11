@@ -59,7 +59,7 @@ Replace ‘Extern_Service_url’ in the prometheus.yml file with the service url
 You can get it in the minikube cluster by running the command and include the output without HTTP://:
 
 ```
-minikube service promsvr  --url
+$minikube service promsvr  --url
 ```
 
 Create slack channel or your existing channel and add incoming Webhooks to slack. To set this up check out this <a href="https://api.slack.com/messaging/webhooks" rev="en_rl_none" textcontent="link">link</a> and add Incoming Webhooks to slack. Once you have your webhook url add it to slack_api_url in alertmanager.yml
