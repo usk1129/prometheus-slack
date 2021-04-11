@@ -1,2 +1,2 @@
 #!/bin/bash
-cd app && kubectl create -f deployment.yml
+cd app && kubectl apply -f deployment.yml
