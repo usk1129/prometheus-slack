@@ -1,3 +1,7 @@
+#!/bin/bash
+set -ex
+
+
 cd configs && 
 kubectl create configmap prometheus --from-file=prometheus.yml
 kubectl create configmap alertmanager --from-file=alertmanager.yml
